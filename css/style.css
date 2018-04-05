@@ -1,0 +1,171 @@
+        body,
+        html {
+
+            font: Arial, 150% Tahoma, sans-serif;
+        }
+
+        #fundo-externo {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /* criamos um contexto para posicionamento */
+        }
+
+        #fundo {
+            position: fixed;
+            /* posição fixa para que a possível rolagem da tela não revele espaços em branco */
+            width: 100%;
+            height: 100%;
+        }
+
+        #fundo img {
+            width: 100%;
+            /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+            position: absolute;
+        }
+
+        #pagina {
+            padding: 0px;
+            width: 960px;
+            /* tamanho mais comum usado */
+            margin: 0px 0px;
+            background: blue;
+        }
+
+        #cabecalho {
+            height: 600px;
+        }
+
+        #conteudo {
+            width: 960px;
+            float: left;
+            background: red;
+        }
+        #lateral {
+            overflow: hidden;
+            width: 250px;
+            float: right;
+            margin-top: 31.7%;
+            padding-right: 0%;
+}
+        #rodape {
+            clear: both;
+            position: fixed;
+            width: 250px;
+	        float: right;
+            margin-top: 0px;
+            overflow: hidden;
+            
+        }
+        #site {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            width: 50%;
+            padding: 0px;
+            margin-left: -300px;
+            /* por causa do posicionamento absoluto temos que usar margem negativa para centralizar o site */
+            background: #FFF;
+            /* fundo branco para navegadores que não suportam rgba */
+            background: rgba(255, 255, 255, 0.9);
+            /* fundo branco com um pouco de transparência */
+        }
+
+        #final {
+            position: absolute;
+            overflow: hidden;
+            top: 230%;
+            left: 0%;
+            right: 100%;
+            width: 100%;
+            padding: 0px;
+            margin-left: 0px;
+        }
+        
+        #cabecalho, #conteudo, #lateral {
+	        margin-bottom: 0px;
+        }
+
+	
+        #pagina, #cabecalho, #conteudo, #lateral, #rodape {
+	        border: solid 0px #ccc;
+        }
+
+        p {
+            margin-bottom: 1.0em;
+        }
+        
+h1,h2 {
+font: bold 150% "Arial", "Helvetica", sans-serif;
+   
+}
+
+h2 {
+font-family: bold 100% sans-serif, Arial;
+}
+h3{
+    font-family: bold 100% Arial,sans-serif;
+    
+}
+p,blockquote{
+    font-family: bold 100% sans-serif,Arial;
+    
+}
+ul{
+    font-family: bold 75% sans-serif,Arial;
+    
+}
+
+/* Media queries/* 
+
+/*  980px ou menor */
+@media screen and (max-width: 980px) {
+	
+	#pagina {
+		width: 100%;
+	}
+	#conteudo {
+		width: 65%;
+	}
+	#lateral {
+		width: 50%;
+	}
+
+}
+
+/* 700px ou menor  */
+@media screen and (max-width: 700px) {
+
+	#conteudo {
+		width: auto;
+		float: none;
+	}
+	#lateral {
+		width: auto;
+		float: none;
+	}
+
+}
+/*  480px or menor  */
+@media screen and (max-width: 480px) {
+
+	#cabecalho {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	#lateral { /* nao mostra a lateral */
+		display: none;
+	}
+
+}
+p,h1,h2,h3,blockquote,ul {
+margin-top: 1px;
+margin-bottom: 1px;
+margin-right: 1px;
+margin-left: 1px;
+}
+
+
